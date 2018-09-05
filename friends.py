@@ -4,4 +4,5 @@ friend = {
     'age': 43,
     'city': 'wuhan'
 }
-print(friend)
+for key, value in friend.items():
+    print(key)
