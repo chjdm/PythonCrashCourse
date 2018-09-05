@@ -17,6 +17,6 @@ citys = {
 }
 
 for city_name, city_detail in citys.items():
-    print(city_name.title() + " is a city of " + city_detail['country']
+    print(city_name.title() + " is a city of " + city_detail['country'].upper()
           + ", has " + str(city_detail['population'])
                            + " people, and is " + city_detail['fact'] + ".")
