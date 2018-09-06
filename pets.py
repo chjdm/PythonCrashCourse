@@ -1,22 +1,7 @@
-pet_0 = {
-    'type': 'dog',
-    'name': 'petty',
-    'owener': 'keying'
-}
+def describe_pet(pet_name='shelly', pet_type='cat'):
+    print("I have a " + pet_type + ", and his name is " +pet_name.title() + ".")
 
-pet_1 ={
-    'type': 'cat',
-    'name': 'shelly',
-    'owener': 'liuyuxuan'
-}
+describe_pet('shelly')
+describe_pet(pet_name='tom', pet_type='dog')
+describe_pet('tichy', 'snake')
 
-pet_2 ={
-    'type': 'dog',
-    'name': 'wangwang',
-    'owener': 'liuyuxuan'
-}
-
-pets = [pet_0, pet_1, pet_2]
-
-for pet in pets:
-    print(pet['name'].title() + "is a " + pet['type'] + ", he is owend by " + pet['owener'].title() + "!"  )
