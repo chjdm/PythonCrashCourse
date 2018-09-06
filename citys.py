@@ -1,6 +1,7 @@
-def describe_citys(city='', country='China'):
-    print(city.title() + " is in " + country.title())
+def city_country(city, country):
+    rst = city.title() + ", " + country.title()
+    return rst
 
-describe_citys('wuhan')
-describe_citys('tokyo', 'japan')
-describe_citys(country='indin', city='menbai')
+print(city_country('beijing', 'china'))
+print(city_country('santiago', 'chile'))
+print(city_country('paris', 'france'))
