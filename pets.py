@@ -4,4 +4,7 @@ def describe_pet(pet_name='shelly', pet_type='cat'):
 describe_pet('shelly')
 describe_pet(pet_name='tom', pet_type='dog')
 describe_pet('tichy', 'snake')
+describe_pet('tichy', 'snake')
+describe_pet('tichy', 'snake')
+describe_pet('tichy', 'snake')
 
