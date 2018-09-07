@@ -1,4 +1,4 @@
-from printing_functions import *
+from before_function.printing_functions import *
 
 unprinted_designs = ['iphone case', 'robot pendant', 'dodecahedron']
 completed_models = []
