@@ -1,12 +1,15 @@
 class Car():
+    '''制造商，型号，出厂年份'''
     def __init__(self, make, model, year):
         self.make = make
         self.model = model
         self.year = year
         self.odometer = 0
+        self.gas_tank = 50
 
     def get_format_name(self):
         format_name = self.make + "  " + self.model + "  "  + str(self.year)
+        print(format_name)
         return format_name.title()
 
     def update_odometer(self, miles):
@@ -22,13 +25,37 @@ class Car():
     def increase_odometer(self, miles):
         self.odometer += miles
 
+    def fill_gas_tank(self):
+        self.gas_tank = 100
 
-my_audi = Car('audi', 'A6', 2016)
 
-print(my_audi.get_format_name())
+class ElectricCar(Car):
+    '''制造商，型号，出厂年份'''
+    def __init__(self, make, model, year):
+        super().__init__(make, model, year)
+        self.battery = Bettery()
 
-my_audi.update_odometer(34)
-my_audi.read_odometer()
+    def fill_gas_tank(self):
+        print("The car hasn't a gas tank!")
 
-my_audi.increase_odometer(3500)
-my_audi.read_odometer()
+
+class Bettery():
+    def __init__(self, battery_size=70):
+        self.battery_size = battery_size
+
+    def describe_battery(self):
+        print("The car has a {}-KWH battery.".format(self.battery_size))
+
+    def get_rang(self):
+        if self.battery_size == 70:
+            range = 250
+        elif self.battery_size ==85:
+            range = 300
+        message = "This car can go approximately {} miles on a full " \
+                  "charge.".format(range)
+        print(message)
+
+    def upgrade_battery(self):
+        if self.battery_size != 85:
+            self.battery_size = 85
+            print("The battery of this car has up to 85-KWH.")

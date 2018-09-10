@@ -18,10 +18,13 @@ class Restaurant():
     def increase_number_served(self, num):
         self.number_served += num
 
-my_restraurant = Restaurant('Alby', 'kension')
-my_restraurant.describe_restaurant()
-my_restraurant.open_restaurant()
-my_restraurant.set_number_served(50)
-print(my_restraurant.number_served)
-my_restraurant.increase_number_served(123)
-print(my_restraurant.number_served)
+
+class IceCreamStand(Restaurant):
+    def __init__(self, restraurant_name, cuisine, flavor):
+        super().__init__(restraurant_name, cuisine)
+        self.flavor = flavor
+
+
+
+allby = IceCreamStand('allby', '', 'italy')
+print(allby.flavor)
