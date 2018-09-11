@@ -1,4 +1,4 @@
-from car import Car
+from learning_complete.car import Car
 from electric_car import ElectricCar
 
 my_beetle = Car('volkswagen', 'beetle', 2015)

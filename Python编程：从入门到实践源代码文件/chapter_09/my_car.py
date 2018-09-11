@@ -1,4 +1,4 @@
-from car import Car
+from learning_complete.car import Car
 
 my_new_car = Car('audi', 'a4', 2015)
 print(my_new_car.get_descriptive_name())

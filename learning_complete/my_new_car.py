@@ -1,4 +1,4 @@
-from car import Car, ElectricCar
+from learning_complete.car import ElectricCar
 
 
 my_tesla = ElectricCar('Tesla', 'Model-s', '2017')
